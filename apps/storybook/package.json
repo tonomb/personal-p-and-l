@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@repo/design-system": "workspace:*",
-    "@storybook/addon-actions": "^8.6.4",
+    "@storybook/addon-actions": "^8.6.12",
     "cmdk": "^1.0.0",
     "date-fns": "^4.1.0",
     "input-otp": "^1.4.2",
