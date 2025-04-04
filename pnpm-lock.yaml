@@ -628,8 +628,8 @@ importers:
         specifier: ^2.22.2
         version: 2.22.2
       '@liveblocks/react':
-        specifier: ^2.20.0
-        version: 2.20.0(react@19.0.0)
+        specifier: ^2.22.3
+        version: 2.22.3(react@19.0.0)
       '@t3-oss/env-nextjs':
         specifier: ^0.12.0
         version: 0.12.0(typescript@5.8.2)(zod@3.24.2)
@@ -2967,17 +2967,23 @@ packages:
   '@liveblocks/client@2.20.0':
     resolution: {integrity: sha512-Z9oRmj/2zWPrZ9xlBjGOhJPA6xd/xIL3TYAHQno2NaaN+vcpOsaehF9zUEWaBM0+73ddlnxg6zDhDm4unSy1+w==}
 
+  '@liveblocks/client@2.22.3':
+    resolution: {integrity: sha512-KnOFtaK6A+w+qlmhEF74o4+NQ2bwoGx9xBZUO0ZoI5sSYXsqiIQk40BHPPVraAEtb33VlkecyCiErOq4+BKwvA==}
+
   '@liveblocks/core@2.20.0':
     resolution: {integrity: sha512-AvNTFhGxqxgZz421VZghDTkzkLm337YO6UQgHh+wHO8uKuYcrX3DUF1+hbPY+YZr8+4sSg5GivdaKR1GSpKAow==}
 
   '@liveblocks/core@2.22.2':
     resolution: {integrity: sha512-ag2P+wfrjtv74Uqkx7RMn54aop3+wDVmSCDX+fvz/FMl+PagqiCajg+OI162CiD/McN09RCgxaxBmXnvPvJpOw==}
 
+  '@liveblocks/core@2.22.3':
+    resolution: {integrity: sha512-G0WdcyjVkhvSB6Ud2GGa1Gklps/VbhoiXwv6hjxNqU4AA+UO8D3z6ZfB2vQJdRkuV1+VBvyBilHAi2OA1/t+IA==}
+
   '@liveblocks/node@2.22.2':
     resolution: {integrity: sha512-rz96ALwstXY2Jet3e6f6jLcrU3ZfSa2YH22qEr3+LAPXF2rBayBp6f6kZt6czGa+t+rlBfuLQzBLzMu6HgRO4A==}
 
-  '@liveblocks/react@2.20.0':
-    resolution: {integrity: sha512-OcJKs/Yc6ESKy/Yo5iIDhDj+HKc6GsG2rLMZLWna2pRdfxPLa0ncWYZkhQqu08JSkIMROde/XxKe+BxeIyz9kw==}
+  '@liveblocks/react@2.22.3':
+    resolution: {integrity: sha512-b5Kr19vYLwyR53Yt+yskGRCsmiPlyevURQCyC8ilhKcTTYSL9DcGhJw8hAu2KSZJ6bnSU6JD6jhlF5Ysz/zj4w==}
     peerDependencies:
       react: ^18 || ^19 || ^19.0.0-rc
 
@@ -12739,9 +12745,15 @@ snapshots:
     dependencies:
       '@liveblocks/core': 2.20.0
 
+  '@liveblocks/client@2.22.3':
+    dependencies:
+      '@liveblocks/core': 2.22.3
+
   '@liveblocks/core@2.20.0': {}
 
   '@liveblocks/core@2.22.2': {}
+
+  '@liveblocks/core@2.22.3': {}
 
   '@liveblocks/node@2.22.2':
     dependencies:
@@ -12752,10 +12764,10 @@ snapshots:
     transitivePeerDependencies:
       - encoding
 
-  '@liveblocks/react@2.20.0(react@19.0.0)':
+  '@liveblocks/react@2.22.3(react@19.0.0)':
     dependencies:
-      '@liveblocks/client': 2.20.0
-      '@liveblocks/core': 2.20.0
+      '@liveblocks/client': 2.22.3
+      '@liveblocks/core': 2.22.3
       react: 19.0.0
 
   '@logtail/next@0.1.7(next@15.2.2(@opentelemetry/api@1.9.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))':
