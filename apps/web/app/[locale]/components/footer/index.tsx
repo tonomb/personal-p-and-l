@@ -3,44 +3,36 @@ import { legal } from '@repo/cms';
 import { Feed } from '@repo/cms/components/feed';
 import { Status } from '@repo/observability/status';
 import Link from 'next/link';
+import type { NavigationItems } from '../types';
 
 export const Footer = () => (
   <Feed queries={[legal.postsQuery]}>
     {async ([data]) => {
       'use server';
 
-      const navigationItems = [
+      const navigationItems: NavigationItems[] = [
         {
           title: 'Home',
           href: '/',
-          description: '',
         },
         {
           title: 'Pages',
-          description: 'Managing a small business today is already tough.',
           items: [
             {
-              title: 'Blog',
-              href: '/blog',
+              title: 'Docs',
+              href: env.NEXT_PUBLIC_DOCS_URL || '',
+              description: '',
             },
           ],
         },
         {
           title: 'Legal',
-          description: 'We stay on top of the latest legal requirements.',
           items: data.legalPages.items.map((post) => ({
             title: post._title,
             href: `/legal/${post._slug}`,
           })),
         },
       ];
-
-      if (env.NEXT_PUBLIC_DOCS_URL) {
-        navigationItems.at(1)?.items?.push({
-          title: 'Docs',
-          href: env.NEXT_PUBLIC_DOCS_URL,
-        });
-      }
 
       return (
         <section className="dark border-foreground/10 border-t">
@@ -50,10 +42,10 @@ export const Footer = () => (
                 <div className="flex flex-col items-start gap-8">
                   <div className="flex flex-col gap-2">
                     <h2 className="max-w-xl text-left font-regular text-3xl tracking-tighter md:text-5xl">
-                      next-forge
+                      Personal P&L
                     </h2>
                     <p className="max-w-lg text-left text-foreground/75 text-lg leading-relaxed tracking-tight">
-                      This is the start of something new.
+                      A open-source operating system for your personal finances.
                     </p>
                   </div>
                   <Status />

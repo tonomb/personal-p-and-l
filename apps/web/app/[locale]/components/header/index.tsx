@@ -13,27 +13,10 @@ import {
 import { Menu, MoveRight, X } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
+import type { HeaderProps, NavigationItems } from '../types';
 
-import type { Dictionary } from '@repo/internationalization';
 import Image from 'next/image';
 import Logo from './logo.svg';
-
-type HeaderProps = {
-  dictionary: Dictionary;
-};
-
-type NavigationItems = {
-  title: string;
-  href: string;
-  description: string;
-  items?: NavigationItem[];
-};
-
-type NavigationItem = {
-  title: string;
-  href: string;
-  description: string;
-};
 
 export const Header = ({ dictionary }: HeaderProps) => {
   const navigationItems: NavigationItems[] = [

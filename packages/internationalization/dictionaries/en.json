@@ -3,7 +3,9 @@
     "global": {
       "primaryCta": "Take Control of Your Finances",
       "secondaryCta": "Join the community",
-      "github_link": "https://github.com/tonomb/personal-p-and-l"
+      "github_link": "https://github.com/tonomb/personal-p-and-l",
+      "title": "Personal P&L",
+      "tagline": "A open-source operating system for your personal finances."
     },
     "header": {
       "home": "Home",
