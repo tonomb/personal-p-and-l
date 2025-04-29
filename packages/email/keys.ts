@@ -4,7 +4,7 @@ import { z } from 'zod';
 export const keys = () =>
   createEnv({
     server: {
-      RESEND_FROM: z.string().min(1).email(),
+      RESEND_FROM: z.string().min(1).email().optional(),
       RESEND_TOKEN: z.string().min(1).startsWith('re_'),
     },
     runtimeEnv: {

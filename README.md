@@ -30,6 +30,10 @@ This project uses PNPM as the package manager
 cp .env.local.example .env.local
 ```
 
+Run the development server with:
+```
+pnpm dev
+```
 
 
 ### This Repo Was Started using next-forge
