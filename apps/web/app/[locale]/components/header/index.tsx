@@ -1,7 +1,6 @@
 'use client';
 
 import { env } from '@/env';
-import { ModeToggle } from '@repo/design-system/components/mode-toggle';
 import { Button } from '@repo/design-system/components/ui/button';
 import {
   NavigationMenu,
@@ -17,44 +16,38 @@ import { useState } from 'react';
 
 import type { Dictionary } from '@repo/internationalization';
 import Image from 'next/image';
-import { LanguageSwitcher } from './language-switcher';
 import Logo from './logo.svg';
 
 type HeaderProps = {
   dictionary: Dictionary;
 };
 
+type NavigationItems = {
+  title: string;
+  href: string;
+  description: string;
+  items?: NavigationItem[];
+};
+
+type NavigationItem = {
+  title: string;
+  href: string;
+  description: string;
+};
+
 export const Header = ({ dictionary }: HeaderProps) => {
-  const navigationItems = [
+  const navigationItems: NavigationItems[] = [
     {
       title: dictionary.web.header.home,
       href: '/',
       description: '',
     },
     {
-      title: dictionary.web.header.product.title,
-      description: dictionary.web.header.product.description,
-      items: [
-        {
-          title: dictionary.web.header.product.pricing,
-          href: '/pricing',
-        },
-      ],
-    },
-    {
-      title: dictionary.web.header.blog,
-      href: '/blog',
+      title: dictionary.web.header.docs,
+      href: env.NEXT_PUBLIC_DOCS_URL || '',
       description: '',
     },
   ];
-
-  if (env.NEXT_PUBLIC_DOCS_URL) {
-    navigationItems.push({
-      title: dictionary.web.header.docs,
-      href: env.NEXT_PUBLIC_DOCS_URL,
-      description: '',
-    });
-  }
 
   const [isOpen, setOpen] = useState(false);
   return (
@@ -114,6 +107,7 @@ export const Header = ({ dictionary }: HeaderProps) => {
             </NavigationMenuList>
           </NavigationMenu>
         </div>
+        {/* LOGO */}
         <div className="flex items-center gap-2 lg:justify-center">
           <Image
             src={Logo}
@@ -122,19 +116,10 @@ export const Header = ({ dictionary }: HeaderProps) => {
             height={24}
             className="dark:invert"
           />
-          <p className="whitespace-nowrap font-semibold">next-forge</p>
+          <p className="whitespace-nowrap font-bold">Personal P&L</p>
         </div>
+
         <div className="flex w-full justify-end gap-4">
-          <Button variant="ghost" className="hidden md:inline" asChild>
-            <Link href="/contact">{dictionary.web.header.contact}</Link>
-          </Button>
-          <div className="hidden border-r md:inline" />
-          <div className="hidden md:inline">
-            <LanguageSwitcher />
-          </div>
-          <div className="hidden md:inline">
-            <ModeToggle />
-          </div>
           <Button variant="outline" asChild className="hidden md:inline">
             <Link href={`${env.NEXT_PUBLIC_APP_URL}/sign-in`}>
               {dictionary.web.header.signIn}
@@ -150,6 +135,7 @@ export const Header = ({ dictionary }: HeaderProps) => {
           <Button variant="ghost" onClick={() => setOpen(!isOpen)}>
             {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </Button>
+          {/* Hamburger Menu Mobile */}
           {isOpen && (
             <div className="container absolute top-20 right-0 flex w-full flex-col gap-8 border-t bg-background py-4 shadow-lg">
               {navigationItems.map((item) => (
