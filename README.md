@@ -35,6 +35,13 @@ Run the development server with:
 pnpm dev
 ```
 
+* Api is running on port `3002` 
+* App is running on port `3000`
+* Docs is running on port `3004`
+* StoryBook is running on port `6006`
+* Studio is running on port `3005`
+* Web is running on port `3001`
+
 
 ### This Repo Was Started using next-forge
 
