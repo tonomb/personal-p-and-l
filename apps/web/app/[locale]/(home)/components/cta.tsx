@@ -1,7 +1,7 @@
 import { env } from '@/env';
 import { Button } from '@repo/design-system/components/ui/button';
 import type { Dictionary } from '@repo/internationalization';
-import { MoveRight, PhoneCall } from 'lucide-react';
+import { MessageSquareDot, MoveRight } from 'lucide-react';
 import Link from 'next/link';
 
 type CTAProps = {
@@ -21,15 +21,15 @@ export const CTA = ({ dictionary }: CTAProps) => (
           </p>
         </div>
         <div className="flex flex-row gap-4">
-          <Button className="gap-4" variant="outline" asChild>
+          <Button className="gap-2" variant="outline" asChild>
             <Link href="/contact">
-              {dictionary.web.global.primaryCta}{' '}
-              <PhoneCall className="h-4 w-4" />
+              {dictionary.web.global.secondaryCta}{' '}
+              <MessageSquareDot className="h-4 w-4" />
             </Link>
           </Button>
-          <Button className="gap-4" asChild>
+          <Button className="gap-2" asChild>
             <Link href={env.NEXT_PUBLIC_APP_URL}>
-              {dictionary.web.global.secondaryCta}{' '}
+              {dictionary.web.global.primaryCta}{' '}
               <MoveRight className="h-4 w-4" />
             </Link>
           </Button>

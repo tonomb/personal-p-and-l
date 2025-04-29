@@ -33,7 +33,7 @@ export const Hero = async ({ dictionary }: HeroProps) => (
           </p>
         </div>
         <div className="flex flex-row gap-3">
-          <Button size="lg" className="gap-4" asChild>
+          <Button size="lg" className="gap-2" asChild>
             <Link href={env.NEXT_PUBLIC_APP_URL}>
               {dictionary.web.global.primaryCta}{' '}
               <MoveRight className="h-4 w-4" />
