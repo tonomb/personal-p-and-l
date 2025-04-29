@@ -1,8 +1,9 @@
 {
   "web": {
     "global": {
-      "primaryCta": "Book a call",
-      "secondaryCta": "Sign up"
+      "primaryCta": "Take Control of Your Finances",
+      "secondaryCta": "Get Started for Free",
+      "github_link": "https://github.com/tonomb/personal-p-and-l"
     },
     "header": {
       "home": "Home",
@@ -19,11 +20,11 @@
     },
     "home": {
       "meta": {
-        "title": "Transform Your Business Operations Today",
-        "description": "In today's fast-paced world, your business deserves better than outdated trading systems. Our innovative platform streamlines operations, reduces complexity, and helps small businesses thrive in the modern economy."
+        "title": "Manage your personal finances like a CFO",
+        "description": "P&L's are the gold standard for managing and tracking a companys finances why not take the same ideas and bring them over to personal finance. The Personal P&L is a open-source operating system for your personal finances. "
       },
       "hero": {
-        "announcement": "Read our latest article"
+        "announcement": "Github"
       },
       "cases": {
         "title": "Empowering Success Stories Across the Globe"
